@@ -1,0 +1,12 @@
+<template bindable="router">
+    <div class="bs-example" data-example-id="simple-nav-stacked">
+        <ul class="nav nav-pills nav-stacked nav-pills-stacked-example">
+            <li repeat.for="row of router.navigation" class="${ row.isActive ? 'link-active' : '' }">
+                <a href.bind="row.href">
+                    <span class="glyphicon glyphicon-${ row.settings.icon }"></span> ${ row.title }
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+</template>
